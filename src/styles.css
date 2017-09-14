@@ -2,3 +2,65 @@
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~normalize.css/normalize.css';
+
+/* MATERIAL THEME OVERRIDES */
+
+md-toolbar.mat-toolbar.mat-primary, button.mat-raised-button.mat-primary {
+    background-color: orangered;
+}
+
+/* CUSTOM CSS */
+
+* {
+    font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.background-container {
+    background-image: url('/assets/spooky-background.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.form-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-stack > * {
+    margin: 16px auto;
+}
+
+.rsvp-card {
+    width: 300px;
+    margin: 32px;
+    position: relative;
+    top: -50px;
+    margin: 0 auto;
+}
+
+.invite-hero {
+    /*background-image: url('/assets/spooky-background.jpeg');*/
+    background-size: cover;
+    background-position: center;
+    height: 360px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+md-toolbar a:link, md-toolbar a:active, md-toolbar a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.invite-hero h1 {
+    font-family: 'Creepster', cursive;
+    font-size: 60px;
+    line-height: 2px;
+}
+
+.invite-hero p {
+    margin: 4px;
+}
