@@ -21,13 +21,13 @@ md-toolbar.mat-toolbar.mat-primary, button.mat-raised-button.mat-primary {
     background-position: center;
 }
 
-.form-stack {
-    display: flex;
-    flex-direction: column;
-}
-
 .form-stack > * {
     margin: 16px auto;
+    width: 100%;
+}
+
+.form-stack md-card-actions {
+    text-align: right;
 }
 
 .rsvp-card {

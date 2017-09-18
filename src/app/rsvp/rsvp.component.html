@@ -1,5 +1,5 @@
 <div class="background-container">
-  
+
   <!-- INVITE DETAILS -->
   <div class="invite-hero">
     <p>INAUGURAL</p>
@@ -12,31 +12,38 @@
   <!-- RSVP Form -->
   <md-card class="rsvp-card">
     <md-card-title>RSVP Response</md-card-title>
-      <md-card-content>
-      <form class="form-stack">
+    <md-card-content>
+      <form class="form-stack" ngNoForm (submit)="processRSVP(submittedRSVP)">
         <md-form-field>
-          <input mdInput placeholder="Name">
+          <input mdInput placeholder="Name" [(ngModel)]="submittedRSVP.name">
         </md-form-field>
-        <md-chip-list>
-          <md-chip>One Guest</md-chip>
-          <md-chip>Two Guests</md-chip>
-          <md-chip>Three Guests</md-chip>
-        </md-chip-list>
-        <md-checkbox checked="true" disabled>I will wear a custome!</md-checkbox>
+        <md-select placeholder="Number of Guests" [(ngModel)]="submittedRSVP.guests">
+          <md-option *ngFor="let guests of [1, 2, 3, 4, 5]" [value]="guests">
+            {{guests}}
+          </md-option>
+        </md-select>
+        <md-checkbox checked="true" disabled>I will wear a costume!</md-checkbox>
+
+        <md-form-field class="example-full-width">
+          <textarea mdInput placeholder="Comment" [(ngModel)]="submittedRSVP.comment">Can't wait to party!</textarea>
+        </md-form-field>
+
+        <md-card-actions>
+          <button md-raised-button color="primary">Save</button>
+        </md-card-actions>
+
       </form>
     </md-card-content>
-    <md-card-actions>
-        <button md-raised-button color="primary">Submit</button>
-    </md-card-actions>
+
   </md-card>
 </div>
 
-<!-- COMMENT & UPDATES FEED -->
-<form>
+<!-- RSVP FEED -->
+<!--<form>
   <md-form-field class="example-full-width">
-      <textarea mdInput placeholder="Comment">Can't wait to party!</textarea>
+    <textarea mdInput placeholder="Comment">Can't wait to party!</textarea>
   </md-form-field>
 </form>
 
 <div ng-repeat="for comment in comments">
-</div>
+</div>-->
