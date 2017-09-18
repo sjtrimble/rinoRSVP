@@ -10,14 +10,14 @@
   </div>
 
   <!-- RSVP Form -->
-  <md-card class="rsvp-card">
+  <md-card class="rsvp-card" *ngIf="userRSVP | async as rsvp">
     <md-card-title>RSVP Response</md-card-title>
     <md-card-content>
-      <form class="form-stack" ngNoForm (submit)="processRSVP(submittedRSVP)">
+      <form class="form-stack" ngNoForm (submit)="processRSVP(rsvp)">
         <md-form-field>
-          <input mdInput placeholder="Name" [(ngModel)]="submittedRSVP.name">
+          <input mdInput placeholder="Name" [(ngModel)]="rsvp.name">
         </md-form-field>
-        <md-select placeholder="Number of Guests" [(ngModel)]="submittedRSVP.guests">
+        <md-select placeholder="Number of Guests" [(ngModel)]="rsvp.guests">
           <md-option *ngFor="let guests of [1, 2, 3, 4, 5]" [value]="guests">
             {{guests}}
           </md-option>
@@ -25,7 +25,7 @@
         <md-checkbox checked="true" disabled>I will wear a costume!</md-checkbox>
 
         <md-form-field class="example-full-width">
-          <textarea mdInput placeholder="Comment" [(ngModel)]="submittedRSVP.comment">Can't wait to party!</textarea>
+          <textarea mdInput placeholder="Comment" [(ngModel)]="rsvp.comment">Can't wait to party!</textarea>
         </md-form-field>
 
         <md-card-actions>
@@ -39,11 +39,11 @@
 </div>
 
 <!-- RSVP FEED -->
-<!--<form>
-  <md-form-field class="example-full-width">
-    <textarea mdInput placeholder="Comment">Can't wait to party!</textarea>
-  </md-form-field>
-</form>
 
-<div ng-repeat="for comment in comments">
-</div>-->
+<div class="rsvp-feed">
+  <h1>RSVP Feed</h1>
+
+  <div *ngFor="let oneRSVP of allRSVPS | async">
+    {{oneRSVP.name}} {{oneRSVP.guests}} {{oneRSVP.comment}}
+  </div>
+</div>

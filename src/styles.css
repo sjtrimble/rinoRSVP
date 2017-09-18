@@ -64,3 +64,10 @@ md-toolbar a:link, md-toolbar a:active, md-toolbar a:visited {
 .invite-hero p {
     margin: 4px;
 }
+
+/* RSVP FEED */
+
+.rsvp-feed  {
+    min-height: 200px;
+    padding: 32px;
+}

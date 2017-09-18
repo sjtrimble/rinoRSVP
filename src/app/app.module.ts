@@ -10,7 +10,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCheckboxModule, MdInputModule, MdToolbarModule, MdCardModule, MdSelectModule } from '@angular/material';
+import { MdButtonModule, MdCheckboxModule, MdInputModule, MdToolbarModule, MdCardModule, MdSelectModule, MdSnackBarModule } from '@angular/material';
 
 import { HomeComponent } from './home/home.component';
 import { RSVPComponent } from './rsvp/rsvp.component';
@@ -34,6 +34,7 @@ import { AdminComponent } from './admin/admin.component';
     MdToolbarModule,
     MdCardModule,
     MdSelectModule,
+    MdSnackBarModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
       { path: 'rsvp/:token', component: RSVPComponent },
