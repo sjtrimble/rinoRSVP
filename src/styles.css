@@ -70,4 +70,24 @@ md-toolbar a:link, md-toolbar a:active, md-toolbar a:visited {
 .rsvp-feed  {
     min-height: 200px;
     padding: 32px;
+    width: 100%;
+}
+
+.rsvp-feed th {
+    text-align: left;
+    border-bottom: 1px solid gray;
+}
+
+.rsvp-feed tr {
+    height: 40px;
+    border-bottom: 1px solid gray;
+}
+
+.rsvp-feed td {
+    min-width: 300px;
+}
+
+.fixed-headers {
+    table-layout: fixed;
+  border-collapse: collapse;
 }

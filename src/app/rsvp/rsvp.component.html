@@ -43,7 +43,21 @@
 <div class="rsvp-feed">
   <h1>RSVP Feed</h1>
 
-  <div *ngFor="let oneRSVP of allRSVPS | async">
-    {{oneRSVP.name}} {{oneRSVP.guests}} {{oneRSVP.comment}}
-  </div>
+    <table class="fixed-headers">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Guests</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let oneRSVP of allRSVPS | async">
+          <td>{{oneRSVP.name}}</td>
+          <td>{{oneRSVP.guests}}</td>
+          <td>{{oneRSVP.comment}}</td>
+        </tr>
+      </tbody>
+    </table>
 </div>
