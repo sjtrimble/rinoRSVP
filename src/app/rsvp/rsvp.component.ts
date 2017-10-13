@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
-import { Router, ActivatedRoute } from '@angular/router';;
-import 'rxjs/add/operator/switchmap';
-import { Observable } from 'rxjs/Observable';
+import { Router, ActivatedRoute } from '@angular/router';
+
 import { MdSnackBar } from '@angular/material';
+import 'rxjs/add/operator/switchMap';
+import { Observable } from 'rxjs/Observable';
 
 export interface RSVP {
   name: string;
