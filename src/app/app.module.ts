@@ -50,4 +50,8 @@ import { AdminComponent } from './admin/admin.component';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    console.log("Dear visitor: Please don't hack this site. It's totally insecure.");
+  }
+ }
