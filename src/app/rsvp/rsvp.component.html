@@ -17,9 +17,16 @@
         <mat-form-field>
           <input matInput placeholder="Name" [(ngModel)]="rsvp.name">
         </mat-form-field>
-        <mat-select placeholder="Number of Guests" [(ngModel)]="rsvp.guests">
-          <mat-option *ngFor="let guests of [1, 2, 3, 4, 5]" [value]="guests">
-            {{guests}}
+        <h2>Will you be able to join us?</h2>
+        <mat-select placeholder="Attendance" [(ngModel)]="rsvp.attendance">
+          <mat-option value="attending">I will Attend</mat-option>
+          <mat-option value="maybe">I might Attend</mat-option>
+          <mat-option value="not attending">I can't Attend</mat-option>
+        </mat-select>
+        <h2>How many people will be joining us?</h2>
+        <mat-select placeholder="Number of Attendees" [(ngModel)]="rsvp.guests">
+          <mat-option *ngFor="let guests of [0, 1, 2, 3, 4, 5]" [value]="guests">
+            {{guests}} attendee(s)
           </mat-option>
         </mat-select>
         <mat-checkbox checked="true" disabled>I will wear a costume!</mat-checkbox>
