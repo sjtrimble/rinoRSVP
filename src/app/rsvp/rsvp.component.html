@@ -10,32 +10,32 @@
   </div>
 
   <!-- RSVP Form -->
-  <md-card class="rsvp-card" *ngIf="userRSVP | async as rsvp">
-    <md-card-title>RSVP Response</md-card-title>
-    <md-card-content>
+  <mat-card class="rsvp-card" *ngIf="userRSVP | async as rsvp">
+    <mat-card-title>RSVP Response</mat-card-title>
+    <mat-card-content>
       <form class="form-stack" ngNoForm (submit)="processRSVP(rsvp)">
-        <md-form-field>
-          <input mdInput placeholder="Name" [(ngModel)]="rsvp.name">
-        </md-form-field>
-        <md-select placeholder="Number of Guests" [(ngModel)]="rsvp.guests">
-          <md-option *ngFor="let guests of [1, 2, 3, 4, 5]" [value]="guests">
+        <mat-form-field>
+          <input matInput placeholder="Name" [(ngModel)]="rsvp.name">
+        </mat-form-field>
+        <mat-select placeholder="Number of Guests" [(ngModel)]="rsvp.guests">
+          <mat-option *ngFor="let guests of [1, 2, 3, 4, 5]" [value]="guests">
             {{guests}}
-          </md-option>
-        </md-select>
-        <md-checkbox checked="true" disabled>I will wear a costume!</md-checkbox>
+          </mat-option>
+        </mat-select>
+        <mat-checkbox checked="true" disabled>I will wear a costume!</mat-checkbox>
 
-        <md-form-field class="example-full-width">
-          <textarea mdInput placeholder="Comment" [(ngModel)]="rsvp.comment">Can't wait to party!</textarea>
-        </md-form-field>
+        <mat-form-field class="example-full-width">
+          <textarea matInput placeholder="Comment" [(ngModel)]="rsvp.comment">Can't wait to party!</textarea>
+        </mat-form-field>
 
-        <md-card-actions>
-          <button md-raised-button color="primary">Save</button>
-        </md-card-actions>
+        <mat-card-actions>
+          <button mat-raised-button color="primary">Save</button>
+        </mat-card-actions>
 
       </form>
-    </md-card-content>
+    </mat-card-content>
 
-  </md-card>
+  </mat-card>
 </div>
 
 <!-- RSVP FEED -->

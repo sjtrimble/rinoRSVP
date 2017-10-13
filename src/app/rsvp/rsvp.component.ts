@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { MdSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material';
 import 'rxjs/add/operator/switchMap';
 import { Observable } from 'rxjs/Observable';
 
@@ -37,7 +37,7 @@ export class RSVPComponent implements OnInit {
 
   constructor(
     public db: AngularFireDatabase,
-    public snackbar : MdSnackBar,
+    public snackbar : MatSnackBar,
     router: Router,
     route: ActivatedRoute) {
       this.userRSVP = route.params.switchMap(params => {
